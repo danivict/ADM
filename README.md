@@ -13,3 +13,13 @@ Backend:
 
 Utilizando o padrão arquitetural **MVC** (Model View Control).
 
+## Requisitos: 
+- O projeto deverá ser desenvolvido utilizando java EE.
+
+- O projeto deverá seguir o padrão estrutural MVC. 
+
+- As paginas podem ser feitas utilizando html, css e JavaScript.
+
+- O banco de dados deverá ser implementado utilizando MySQL.
+
+- As imagens poderão estar salvas no diretório da aplicação.
