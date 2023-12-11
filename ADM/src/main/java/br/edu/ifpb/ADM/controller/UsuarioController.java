@@ -11,34 +11,34 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.edu.ifpb.ADM.model.AnuncioModel;
+import br.edu.ifpb.ADM.model.UsuarioModel;
 import br.edu.ifpb.ADM.model.RespostaModelo;
-import br.edu.ifpb.ADM.service.AnuncioService;
+import br.edu.ifpb.ADM.service.UsuarioService;
 
 @RestController
 @CrossOrigin(origins = "*")
-public class AnuncioController {
+public class UsuarioController {
 
     @Autowired
-    private AnuncioService as;
+    private UsuarioService us;
 
-    @GetMapping("/anuncios")
-    public Iterable<AnuncioModel> listar() {
-        return as.listar();
+    @GetMapping("/usuarios")
+    public Iterable<UsuarioModel> listar() {
+        return us.listar();
     }
 
-    @PostMapping("/anuncios/cadastrar")
-    public ResponseEntity<?> cadastrar(@RequestBody AnuncioModel am) {
-        return as.cadastrarAlterar(am, "cadastrar");
+    @PostMapping("/usuarios/cadastrar")
+    public ResponseEntity<?> cadastrar(@RequestBody UsuarioModel um) {
+        return us.cadastrarAlterar(um, "cadastrar");
     }
 
-    @PutMapping("/anuncios/alterar")
-    public ResponseEntity<?> alterar(@RequestBody AnuncioModel am) {
-        return as.cadastrarAlterar(am, "alterar");
+    @PutMapping("/usuarios/alterar")
+    public ResponseEntity<?> alterar(@RequestBody UsuarioModel um) {
+        return us.cadastrarAlterar(um, "alterar");
     }
 
-    @DeleteMapping("/anuncios/remover/{id}")
+    @DeleteMapping("/usuarios/remover/{id}")
     public ResponseEntity<RespostaModelo> remover(@PathVariable long id) {
-        return as.remover(id);
+        return us.remover(id);
     }
 }
